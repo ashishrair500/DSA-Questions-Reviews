@@ -55,58 +55,62 @@ class Compute
     second
     */
        
-     /*   long [] arr = {-1,-1};
-        int firsts=0;
-       int seconds=0;
+        long [] arr = {-1,-1};
+     int firsts=0;
+       long seconds=Integer.MAX_VALUE;
        
-       if(a.length==0){
-          // arr[0]=a[0];
-           return arr;
-       }
+        if(n==1){
+           arr[0]=-1;
+           arr[1]=-1;
+        }
         
         for(int i=0; i<a.length; i++){
             if(a[i]<a[firsts]){
-               seconds=firsts; 
+             //  seconds=firsts; 
                 firsts=i;
             }
-            
-          
-            
-            
         }
         
         arr[0]=a[firsts];
-        arr[1]=a[seconds];
+       // arr[1]=a[seconds];
       /*   
       if(firsts==seconds){
             seconds=1;
         }
        
           arr[0]=a[firsts];
-          
+        */
+        
         for(int i=0; i<a.length; i++){
-         if(a[i] != a[firsts]){
+         
+         
+
+        if(a[i] < seconds && a[i] != a[firsts]){
             
+            seconds=a[i];
             
         
-        if(a[i] < a[seconds]  ){
-            
-            seconds=i;
-            
         }
         }
-        }
-        arr[1]=a[seconds];
+        arr[1]=seconds;
         
-        *//*
+        
+        
+        
+         if(arr[1] == Integer.MAX_VALUE){
+            arr[0] = -1;
+            arr[1] = -1;
+        }
+        
+        
         return arr;
         
         
-        */
         
         
         
-Arrays.sort(a);
+        /*
+         Arrays.sort(a);
         long arr[]=new long[2];
          if(n==1){
            arr[0]=-1;
@@ -127,7 +131,7 @@ Arrays.sort(a);
             
         }
         }
-        return arr;
+        return arr;*/
         
     }
 }
