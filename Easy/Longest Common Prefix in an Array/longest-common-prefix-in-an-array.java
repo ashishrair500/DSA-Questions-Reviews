@@ -31,11 +31,12 @@ class Solution{
         String s1=arr[0];
         String s2=arr[n-1];
         int i=0;
+        StringBuilder prefix= new StringBuilder("");
       //  if(s1.length()>s2.length()){
        for(int j=0; j<s1.length() ; j++){
           
-            if(s1.charAt(i)==s2.charAt(i))
-            i++;
+            if(s1.charAt(j)==s2.charAt(j))
+            prefix.append(arr[0].charAt(j));
             else
             break;
         }
@@ -54,8 +55,9 @@ class Solution{
             
             
         }*/
-        if(i>0)
-        return s1.substring(0,i);
+        String str= new String(prefix);
+        if(str.length()!=0)
+        return str;
         else
         return "-1";
     }
